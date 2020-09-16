@@ -11,6 +11,8 @@
     <script type="text/javascript">
       
      function receiveMesssage(event) {
+      
+      const message = JSON.parse(event.data);
        
       console.log('=================================');
       console.log(event.data); 
