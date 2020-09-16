@@ -7,8 +7,13 @@
   </head>
   <body>
     <div id="vis"></div>
-
+    
     <script type="text/javascript">
+      
+     function receiveMesssage(event) {
+       
+      console.log(event); 
+      
       var yourVlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
         description: 'A simple bar chart with embedded data.',
@@ -32,6 +37,8 @@
         }
       };
       vegaEmbed('#vis', yourVlSpec);
+     }
+     window.addEventListener('message', receiveMessage);
     </script>
   </body>
 </html>
