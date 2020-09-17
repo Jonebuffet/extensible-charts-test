@@ -42,7 +42,13 @@
       };
       vegaEmbed('#vis', yourVlSpec);
      }
-     window.addEventListener('message', receiveMesssage(event));
+     const isDataReady = new Promise((resolve, reject) => {
+         window.addEventListener('message', resolve);
+     })
+     Promise.all([isMapLoaded, isDataReady]).then(([_, event]) => {
+         receiveMessage(event);
+         window.addEventListener('message', receiveMessage);
+     });
     </script>
   </body>
 </html>
