@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <title>Embedding Vega-Lite</title>
@@ -7,17 +8,8 @@
   </head>
   <body>
     <div id="vis"></div>
-    
-    <script type="text/javascript">
-      
-     function receiveMesssage(event) {
-      /*
-      const message = JSON.parse(event.data);
 
-      console.log('=================================');
-      console.log(message); 
-      console.log('=================================');
-      */
+    <script type="text/javascript">
       var yourVlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
         description: 'A simple bar chart with embedded data.',
@@ -41,7 +33,6 @@
         }
       };
       vegaEmbed('#vis', yourVlSpec);
-     }
     </script>
   </body>
 </html>
