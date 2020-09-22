@@ -1,14 +1,1 @@
-from datetime import datetime, timedelta
-import jwt  # pip install pyjwt
-
-ORGANIZATION_SECRET = '0TgPTRgMLwv1p6pERqxZiNfmq64dN2AEaC9ffOdnwHsYtX6sxY4JjabO4oaJ7lvr'
-BASE_URL = 'https://embed.chartio.com/d/john-testing/digisign-sales-sales-by-rep/'
-
-payload = {
-    'dashboard': 468936,
-    'organization': 55415,
-    'exp': datetime.utcnow() + timedelta(seconds=30),
-    'env': {"MYVAR": 42}
-}
-token = jwt.encode(payload, ORGANIZATION_SECRET)
-print('<iframe src="{0}?embed_token={1}"></iframe>'.format(BASE_URL, token.decode('utf-8')))
+<iframe width="560" height="315" src="https://www.youtube.com/embed/owsfdh4gxyc" frameborder="0" allowfullscreen></iframe>
