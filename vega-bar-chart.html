@@ -11,7 +11,9 @@
 
     <script type="text/javascript">
       function receiveMessage (event) {
-        console.log(event.data);
+        //console.log(event.data);
+        var event_data = JSON.parse(event.data);
+        console.log(event_data;
       }
       
       var yourVlSpec = {
