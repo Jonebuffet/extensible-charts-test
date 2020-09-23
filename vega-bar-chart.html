@@ -10,6 +10,10 @@
     <div id="vis"></div>
 
     <script type="text/javascript">
+      function receiveMessage (event) {
+        console.log(event.data);
+      }
+      
       var yourVlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
         description: 'A simple bar chart with embedded data.',
