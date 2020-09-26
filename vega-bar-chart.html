@@ -41,7 +41,12 @@
         }
       };
       
-      vegaEmbed('#vis', yourVlSpec);
+      vegaEmbed('#vis', yourVlSpec)
+        .then((res) => res.view
+        .renderer('svg')
+        .insert("chart_data",  my_data)
+        .run()
+        );;
       }
       window.addEventListener('message', receiveMessage, false);
     </script>
