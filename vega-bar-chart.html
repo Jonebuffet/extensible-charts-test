@@ -7,8 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.11.1"></script>
   </head>
   <body>
-    <div id="vis"></div>
-
+    <div id=‘vis’ style=‘width: 400px; height: 300px;’></div>
     <script type="text/javascript">
       function receiveMessage (event) {
         //console.log(event.data);
@@ -16,6 +15,8 @@
         console.log(event_data);
         var chart_data = event_data.data;
         console.log(chart_data);
+        var chart_map_data = chart_data.map(a => a.cases)
+        console.log(chart_map_data);
       
       
       var yourVlSpec = {
