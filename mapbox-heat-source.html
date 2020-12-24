@@ -61,9 +61,16 @@
                     date = row.date;
                 } */
                 //JMW
+                
                 results.push(row);
             }
             if(results.length > 0) {
+                //JMW
+                console.log("=============> console.log(results);");
+                console.log(results);
+                console.log("=============> console.log(results);");
+                //JMW
+                
                 yield results;
             }
         }
@@ -78,11 +85,6 @@
                         geometry: { type: 'Point', coordinates: [row.longitude, row.latitude] },
                         properties: { cases: row['total sum of confirmed'] }
                     };
-                    //JMW
-                    console.log("=============>console.log(row.longitude);");
-                    console.log(row.longitude);
-                    console.log("=============>console.log(row.longitude);");
-                    //JMW
                 })
             };
         }
@@ -95,14 +97,6 @@
 
             // Set styles
             document.body.style.background = event_data.options.theme.chart.background;
-            
-            /* JMW
-            console.log(event_data);
-            
-            console.log("=============");
-            console.log(event_data.data);
-            console.log("=============");
-            JMW */
             
             // Cache height/width to prevent unnecessary resizes
             if (new_width !== width || new_height != height) {
@@ -119,12 +113,6 @@
                 'data': transformToGeoJson(firstDaysData)
             });
 
-            /* JMW
-            console.log("=============");
-            console.log(map);
-            console.log("=============");
-            JMW */
-            
             // Create a setTimeout for the first day that then calls a setTimeout for the next day (and so on).
             remainingDaysData.reverse().reduce((prev, cur) => {
                 return () => {
