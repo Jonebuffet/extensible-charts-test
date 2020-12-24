@@ -80,7 +80,10 @@
 
             // Set styles
             document.body.style.background = event_data.options.theme.chart.background;
-
+            
+            //JMW
+            console.log(event_data);
+            //JMW
             // Cache height/width to prevent unnecessary resizes
             if (new_width !== width || new_height != height) {
                 resize(new_width, new_height);
