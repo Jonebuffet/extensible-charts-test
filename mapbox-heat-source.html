@@ -47,12 +47,19 @@
             let results = [];
             
             //JMW
-            console.log("=============");
+            console.log("=============> console.log(data);");
             console.log(data);
-            console.log("=============");
+            console.log("=============> console.log(data);");
             //JMW */
 
             for(let row of data) {
+                           //JMW
+            console.log("=============> console.log(row.date);");
+            console.log(row.date);
+            console.log(date);
+            console.log("=============> console.log(row.date);");
+            //JMW */
+                
                 if(!dateEql(row.date, date)) {
                     yield results;
                     results = [];
