@@ -16,8 +16,8 @@
             // Pick a reasonable center and zoom to start with based on default data.
             //center: [-80.4527897971384, 37.13764809219349],
             center: [ -7.396704, 54.897706 ],
-            pitch: 60,
-            bearing: -60,
+            //pitch: 60,
+            //bearing: -60,
             zoom: 10
         });
 
@@ -39,6 +39,7 @@
                 date1[1] === date2[1] && 
                 date1[2] === date2[2];
         }
+        
 
         // Generator to give us an array of location data for each day.
         function* daily(data) {
@@ -68,6 +69,9 @@
                         geometry: { type: 'Point', coordinates: [row.longitude, row.latitude] },
                         properties: { cases: row['total sum of confirmed'] }
                     };
+                    console.log("=============");
+                    console.log(row.longitude);
+                    console.log("=============");
                 })
             };
         }
@@ -81,13 +85,13 @@
             // Set styles
             document.body.style.background = event_data.options.theme.chart.background;
             
-            //JMW
+            /* JMW
             console.log(event_data);
             
             console.log("=============");
             console.log(event_data.data);
             console.log("=============");
-            //JMW
+            JMW */
             
             // Cache height/width to prevent unnecessary resizes
             if (new_width !== width || new_height != height) {
@@ -104,11 +108,11 @@
                 'data': transformToGeoJson(firstDaysData)
             });
 
-            //JMW
+            /* JMW
             console.log("=============");
             console.log(map);
             console.log("=============");
-            //JMW
+            JMW */
             
             // Create a setTimeout for the first day that then calls a setTimeout for the next day (and so on).
             remainingDaysData.reverse().reduce((prev, cur) => {
