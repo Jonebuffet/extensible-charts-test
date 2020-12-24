@@ -53,13 +53,6 @@
             //JMW */
 
             for(let row of data) {
-                           //JMW
-            console.log("=============> console.log(row.date);");
-            console.log(row.date);
-            console.log(date);
-            console.log("=============> console.log(row.date);");
-            //JMW */
-                
                 //JMW
                 /* 
                 if(!dateEql(row.date, date)) {
@@ -85,9 +78,11 @@
                         geometry: { type: 'Point', coordinates: [row.longitude, row.latitude] },
                         properties: { cases: row['total sum of confirmed'] }
                     };
-                    console.log("=============");
+                    //JMW
+                    console.log("=============>console.log(row.longitude);");
                     console.log(row.longitude);
-                    console.log("=============");
+                    console.log("=============>console.log(row.longitude);");
+                    //JMW
                 })
             };
         }
