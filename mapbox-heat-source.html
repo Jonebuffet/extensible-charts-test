@@ -45,6 +45,12 @@
         function* daily(data) {
             let date = data[0].date;
             let results = [];
+            
+            //JMW
+            console.log("=============");
+            console.log(data);
+            console.log("=============");
+            //JMW */
 
             for(let row of data) {
                 if(!dateEql(row.date, date)) {
